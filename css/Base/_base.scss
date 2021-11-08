@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "游ゴシック体", "Yu Gothic", sans-serif;
+  background-color: $color-bg;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $color-black;
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  @include respond(sp) {
+    padding: 0 1.5rem;
+  }
+}
+
+.sp-on {
+  display: none;
+  @include respond(sp) {
+    display: block;
+  }
+}
+.sp-off {
+  display: block;
+  @include respond(sp) {
+    display: none;
+  }
+}
+
+.toggle-text {
+  @include respond(sp) {
+    display: none;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+.d-block {
+  display: block;
+}
+
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+input[type="email"] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}

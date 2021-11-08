@@ -1,0 +1,83 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  @include respond(pc) {
+    font-size: calc(100vw / 120);
+  }
+  @include respond(sp) {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  padding: 5.8rem 0 3.5rem;
+  position: relative;
+  h2 {
+    font-size: 4.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    letter-spacing: 0.4rem;
+    width: 70%;
+  }
+  p {
+    font-size: 1.8rem;
+    color: $color-brick;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+    width: 30%;
+    text-align: right;
+  }
+  @include respond(sp) {
+    flex-direction: column-reverse;
+    padding: 2.5rem 0 1.5rem 0;
+    h2 {
+      font-size: 2.4rem;
+      width: 100%;
+      text-align: center;
+      letter-spacing: 0.2rem;
+      width: 100%;
+    }
+    p {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      letter-spacing: 0;
+      width: 100%;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      $color-blue-dark 62.5%,
+      $color-brick 37.5%
+    );
+    @include respond(sp) {
+      background: linear-gradient(
+        to right,
+        $color-blue-dark 70%,
+        $color-brick 30%
+      );
+      height: 0.6rem;
+    }
+  }
+}

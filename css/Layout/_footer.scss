@@ -1,0 +1,17 @@
+footer {
+  background: $color-black;
+  height: 14.5rem;
+  color: $color-white;
+  text-align: right;
+  p {
+    padding-top: 8rem;
+    font-size: 1.1rem;
+    color: $color-link;
+  }
+  @include respond(sp) {
+    height: 7rem;
+    p {
+      padding-top: 3rem;
+    }
+  }
+}

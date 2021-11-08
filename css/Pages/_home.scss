@@ -1,0 +1,704 @@
+// Concept
+.concept {
+  background-color: $color-white;
+  &--main {
+    display: flex;
+    padding: 8rem 0 7rem 0;
+    @include respond(sp) {
+      flex-direction: column;
+      padding: 2.5rem 1.5rem;
+    }
+    &__title {
+      width: 50%;
+      h2 {
+        font-size: 6.3rem;
+        font-family: $font-alata;
+        line-height: 6rem;
+        margin-bottom: 1.5rem;
+        @include respond(sp) {
+          font-size: 4rem;
+        }
+      }
+      p {
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: 2.5rem;
+      }
+      @include respond(sp) {
+        width: 100%;
+        text-align: center;
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    &__content {
+      width: 50%;
+      padding-left: 2rem;
+      h3 {
+        font-size: 2.4rem;
+        margin-bottom: 1.4rem;
+        letter-spacing: 0.25rem;
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+        font-weight: 500;
+      }
+      @include respond(sp) {
+        width: 100%;
+        padding-left: 0;
+        h3 {
+          font-size: 1.6rem;
+          text-align: center;
+          letter-spacing: 0.15rem;
+          margin-top: 2.5rem;
+        }
+        p {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+  &--form {
+    background-color: $color-black;
+    text-align: center;
+    padding: 4.8rem 0rem 7.8rem 0;
+    color: $color-white;
+    h2 {
+      font-size: 4rem;
+      font-family: $font-alata;
+      letter-spacing: 1px;
+      span {
+        font-size: 2rem;
+      }
+    }
+    p {
+      margin: 3rem 0;
+      font-size: 1.4rem;
+      letter-spacing: 0.14rem;
+      line-height: 1.4rem;
+      font-weight: 500;
+      @include respond(sp) {
+        margin: 2rem 0 1.5rem 0;
+      }
+    }
+    @include respond(sp) {
+      padding: 2rem 0 1.5rem 0;
+      h2 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.1rem;
+        letter-spacing: 0.12rem;
+        font-weight: bold;
+        line-height: 1.8rem;
+      }
+    }
+    .input-form {
+      display: flex;
+      input {
+        width: 77.5%;
+        height: 6rem;
+        padding-left: 3rem;
+        color: $color-black;
+        border: none;
+        &:focus {
+          outline: none;
+        }
+      }
+      ::-webkit-input-placeholder {
+        font-weight: 500;
+        color: $color-black;
+      }
+      :-moz-placeholder {
+        font-weight: 500;
+        color: $color-black;
+      }
+      ::-moz-placeholder {
+        font-weight: 500;
+        color: $color-black;
+      }
+      :-ms-input-placeholder {
+        font-weight: 500;
+        color: $color-black;
+      }
+      a {
+        display: block;
+        width: 22.5%;
+        background-color: $color-orange;
+        line-height: 6rem;
+        color: $color-white;
+        position: relative;
+        font-family: $font-hira;
+        background-image: url("../img/icon_register.png");
+        background-repeat: no-repeat;
+        background-position: 92% 50%;
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+      @include respond(sp) {
+        flex-direction: column;
+        input {
+          width: 100%;
+          height: 5rem;
+          padding-left: 1rem;
+          font-size: 1.4rem;
+          letter-spacing: 0.2rem;
+        }
+        ::-webkit-input-placeholder {
+          text-align: center;
+        }
+        :-moz-placeholder {
+          text-align: center;
+        }
+        ::-moz-placeholder {
+          text-align: center;
+        }
+        :-ms-input-placeholder {
+          text-align: center;
+        }
+        a {
+          width: 100%;
+          height: 5rem;
+          font-size: 1.4rem;
+          line-height: 5rem;
+        }
+      }
+    }
+  }
+}
+// News
+.news {
+  padding: 4.5rem 0 0 0;
+  background-color: $color-bg;
+  @include respond(sp) {
+    padding: 3rem 0 0 0;
+  }
+  .title {
+    padding: 5.5rem 0 4rem 0;
+    @include respond(sp) {
+      padding: 2.2rem 0 3.2rem 0;
+    }
+  }
+  &--items {
+    padding: 4rem 0 3.1rem 0;
+    background-color: $color-white;
+    @include flexCenter;
+    justify-content: space-between;
+    @include respond(sp) {
+      display: block;
+      padding: 1.6rem 0 1rem 0;
+    }
+    transition: background-color 0.3s ease-in-out;
+    &-content {
+      display: flex;
+      align-items: center;
+      padding-left: 4rem;
+      .news--items__text {
+        padding-left: 4.5rem;
+      }
+      @include respond(sp) {
+        display: block;
+        padding-left: 0;
+        img {
+          float: left;
+          margin-top: -1.6rem;
+          width: 16.5rem;
+          margin-right: 2rem;
+          object-fit: cover;
+        }
+        .news--items__text {
+          padding-left: 1.5rem;
+        }
+      }
+    }
+    &__text {
+      padding-left: 6rem;
+      @include respond(sp) {
+        padding: 0 1.5rem;
+      }
+      .date-news {
+        font-size: 1.1rem;
+        color: $color-text-brick;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        @include respond(sp) {
+          font-size: 1rem;
+          margin-bottom: 0.8rem;
+        }
+      }
+      .content-news {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2.8rem;
+        @include respond(sp) {
+          font-size: 1.2rem;
+          line-height: 2rem;
+        }
+      }
+    }
+    &__link {
+      width: 6rem;
+      text-align: center;
+      .arrow {
+        border: solid $color-link;
+        border-width: 0 2px 2px 0;
+        padding: 0.3rem;
+      }
+      @include respond(sp) {
+        width: calc(100% - 3rem);
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        padding-top: 1rem;
+        margin-top: 1rem;
+        border-top: 1px solid $color-bg;
+        margin-left: 1.5rem;
+        span {
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: $color-black;
+        }
+        .arrow {
+          padding: 0.18rem;
+        }
+      }
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .box {
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-bg;
+    }
+  }
+}
+// Platform
+.platform {
+  padding: 8rem 0 0 0;
+  background-color: $color-bg;
+  @include respond(sp) {
+    padding: 3rem 0 0 0;
+  }
+  .desc {
+    font-size: 1.5rem;
+    margin-bottom: 3.4rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    @include respond(sp) {
+      padding: 0 1.5rem;
+      font-size: 1.3rem;
+      line-height: 2.2rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  &--box {
+    display: flex;
+    justify-content: space-between;
+    @include respond(sp) {
+      flex-direction: column;
+    }
+    &__type {
+      @include flexCenter;
+      flex-direction: column;
+      background-color: $color-white;
+      width: 22.5%;
+      text-align: center;
+      padding: 8rem 0;
+      .user-type {
+        font-size: 1.4rem;
+        color: $color-text-brick;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      .unit-box {
+        display: flex;
+        flex-direction: column;
+        .unit {
+          p {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: $color-link;
+          }
+          margin: 2.5rem 0;
+        }
+      }
+      @include respond(sp) {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem 0;
+        // Flex in sp, pc none
+        .unit-box {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          padding: 0 2rem;
+          .unit {
+            margin: 0 1.5rem !important;
+            width: 8.6rem;
+            p {
+              font-size: 0.9rem;
+            }
+          }
+        }
+        .user-type {
+          margin: 0 0 0.5rem 0;
+          font-size: 1.1rem;
+        }
+      }
+    }
+    &__detail {
+      width: 74.2%;
+      @include respond(sp) {
+        width: 100%;
+      }
+      .platform-items {
+        background-color: $color-white;
+        display: flex;
+        padding: 4rem 0;
+        @include respond(pc) {
+          flex-direction: column;
+          padding: 1.75rem 0;
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-bg;
+        }
+        .name-service {
+          width: 422px;
+          padding-left: 4rem;
+          @include respond(pc) {
+            width: 100%;
+            padding: 0 1.5rem;
+          }
+          .name-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3 {
+              text-transform: uppercase;
+              font-family: $font-alata;
+              font-size: 2rem;
+              letter-spacing: 0.3rem;
+              @include respond(sp) {
+                letter-spacing: 0;
+                font-size: 1.5rem;
+              }
+            }
+            &__image {
+              display: flex;
+              align-items: center;
+              p {
+                font-size: 1.1rem;
+                font-weight: bold;
+                margin-right: 1rem;
+                @include respond(sp) {
+                  font-size: 0.9rem;
+                }
+              }
+              @include respond(sp) {
+                img {
+                  width: 10.2rem;
+                }
+              }
+            }
+          }
+          .box-arrow {
+            background-color: $color-gray;
+            height: 4rem;
+            line-height: 4rem;
+            margin-top: 1.5rem;
+            position: relative;
+            z-index: 2;
+            @include respond(sp) {
+              height: 3rem;
+              line-height: 3rem;
+              margin-top: 0.8rem;
+            }
+            &::before {
+              position: absolute;
+              content: "";
+              width: 2rem;
+              height: 2rem;
+              background-color: $color-gray;
+              left: 2rem;
+              top: -10px;
+              transform: rotate(45deg);
+              z-index: -1;
+              @include respond(sp) {
+                width: 1.5rem;
+                height: 1.5rem;
+                left: 1.5rem;
+                top: -5px;
+              }
+            }
+            p {
+              font-size: 1.2rem;
+              padding-left: 2rem;
+              font-weight: 500;
+              @include respond(sp) {
+                font-size: 1rem;
+                text-align: center;
+                padding: 0;
+              }
+            }
+          }
+        }
+        .detail-service {
+          width: 468px;
+          padding: 0 4.8rem 0 1.3rem;
+          @include respond(pc) {
+            width: 100%;
+            padding: 2rem 1.5rem 0 1.5rem;
+          }
+          h4 {
+            font-size: 1.4rem;
+            color: $color-text-brick;
+            margin-bottom: 1.2rem;
+            @include respond(sp) {
+              font-size: 1.2rem;
+            }
+          }
+          p {
+            font-size: 1.4rem;
+            font-weight: 500;
+            @include respond(sp) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .platform-action {
+    .send {
+      background-color: $color-black;
+      width: 58rem;
+      margin-top: 4rem;
+      margin-left: 25.8%;
+      @include respond(sp) {
+        margin-top: 3rem;
+        margin-left: 0;
+        font-size: 1.4rem;
+        height: 5rem;
+        line-height: 5rem;
+        width: 100%;
+      }
+      height: 6rem;
+      line-height: 6rem;
+      display: block;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      position: relative;
+      background-image: url("../img/icon_mail.png");
+      background-repeat: no-repeat;
+      background-position: 95% 50%;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+// Baus Team
+.baus {
+  padding: 8rem 0 0 0;
+  background-color: $color-bg;
+  position: relative;
+  @include respond(sp) {
+    padding: 4rem 0 0 0;
+  }
+  .title {
+    padding-top: 5.3rem;
+    padding-bottom: 2.5rem;
+    @include respond(sp) {
+      padding-top: 2.5rem;
+      padding-bottom: 2rem;
+    }
+  }
+  .desc {
+    margin-bottom: 4rem;
+    &-line {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 3.5rem;
+      @include respond(sp) {
+        font-size: 1.3rem;
+        padding: 0 1.5rem;
+        line-height: 2.2rem;
+        &:not(:last-child) {
+          margin-bottom: 1.2rem;
+        }
+      }
+    }
+  }
+  &--items {
+    background: $color-white;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    @include respond(sp) {
+      padding: 0;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    &__image {
+      width: 23rem;
+      @include respond(pc) {
+        width: 21%;
+      }
+      @include respond(sp) {
+        width: 100%;
+        display: flex;
+        .box-image {
+          max-width: 16.5rem;
+          width: 50%;
+        }
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .name {
+      padding: 0.3rem 0 1.2rem 0;
+    }
+    .company {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: auto;
+      }
+    }
+    &__sp {
+      display: none;
+      @include respond(sp) {
+        display: flex;
+      }
+      width: 50%;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 1.5rem;
+      .position {
+        font-size: 1rem;
+        color: $color-text-brick;
+        font-weight: bold;
+      }
+      .name {
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+    }
+    &__info {
+      width: 85rem;
+      position: relative;
+      z-index: 1;
+      @include respond(pc) {
+        width: 76%;
+      }
+      @include respond(sp) {
+        width: 100%;
+        margin-top: 1.2rem;
+      }
+      .position {
+        font-size: 1.1rem;
+        color: $color-text-brick;
+        font-weight: bold;
+      }
+      .name {
+        font-size: 2.2rem;
+        font-weight: bold;
+      }
+      .info {
+        font-size: 1.4rem;
+        font-family: $font-hira;
+        line-height: 2.4rem;
+        @include respond(sp) {
+          font-size: 1.2rem;
+          padding: 0 1.5rem;
+          line-height: 2rem;
+        }
+        a {
+          color: $color-link;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      .image,
+      .image-1 {
+        position: absolute;
+        bottom: -0.25rem;
+        right: 2.5rem;
+        z-index: -1;
+        img {
+          width: 45%;
+        }
+      }
+    }
+    .block {
+      display: block;
+      width: 100%;
+      .test {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}
+// Sponsor
+.sponsor {
+  margin-top: -4rem;
+  padding: 8rem 0 4.8rem 0;
+  background-color: $color-bg;
+  @include respond(sp) {
+    padding: 6rem 0 0 0;
+  }
+  ul {
+    list-style: none;
+    li {
+      width: calc((100% - 12rem) / 4);
+      transition: transform 1s;
+      @include respond(pc) {
+        width: calc((100% - 9rem) / 4);
+      }
+      @include respond(sp) {
+        width: calc((100% - 3rem) / 3);
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+      }
+      transition: all 0.75s;
+      &:hover {
+        transform: translate(-10px, -10px);
+        -webkit-box-shadow: 15px 15px 0px -2px $color-orange;
+        -moz-box-shadow: 15px 15px 0px -2px $color-orange;
+        box-shadow: 15px 15px 0px -2px $color-orange;
+      }
+    }
+  }
+  &--image {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include respond(sp) {
+      margin-top: 0.7rem;
+    }
+    &__items {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}

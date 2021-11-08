@@ -1,0 +1,21 @@
+.arrow {
+  border: solid $color-black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 0.5rem;
+  @include respond(sp) {
+    padding: 0.3rem;
+  }
+  &-down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  &-up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  &-right {
+    transform: rotate(312deg);
+    -webkit-transform: rotate(312deg);
+  }
+}

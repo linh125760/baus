@@ -1,0 +1,35 @@
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flexCenter {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin btn($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sp {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == pc {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}

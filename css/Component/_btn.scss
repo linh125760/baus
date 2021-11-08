@@ -1,0 +1,48 @@
+.btn {
+  width: 27rem;
+  height: 6rem;
+  background-color: $color-black;
+  display: inline-block;
+  color: $color-white;
+  text-align: center;
+  line-height: 6rem;
+  text-transform: uppercase;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  transition: all 0.25s ease-in-out;
+  @include respond(sp) {
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.4rem;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-link {
+  display: none;
+  padding: 1.5rem 0 0 0;
+  margin: 0 1.5rem;
+  text-align: center;
+  border-top: 1px solid $color-bg;
+  position: relative;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-image: url("../img/icon_open.png");
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 98% 80%;
+  &::after {
+    position: absolute;
+  }
+  @include respond(sp) {
+    display: block;
+  }
+}
+
+.open {
+  background-image: url("../img/icon_close.png");
+}

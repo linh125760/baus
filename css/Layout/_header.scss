@@ -1,0 +1,58 @@
+header {
+  background-image: url("../img/movie_pc.png");
+  @include respond(sp) {
+    background-image: url("../img/movie_sp.png");
+    @supports (-webkit-touch-callout: none) {
+      background: url("../img/movie_sp.png") center top no-repeat scroll;
+      background-size: auto 100vh;
+    }
+  }
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  text-align: center;
+  position: relative;
+  .movie-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    img {
+      width: 100%;
+    }
+    @include respond(sp) {
+      left: 0;
+      transform: translateX(0);
+      transform: translateY(-50%);
+      padding: 0 3rem;
+    }
+    h1 {
+      margin-top: 3.5rem;
+      font-size: 2.045rem;
+      letter-spacing: 0.23rem;
+      @include respond(sp) {
+        font-size: 1.4rem;
+        letter-spacing: 0;
+      }
+    }
+  }
+  .movie-action {
+    font-family: $font-alata;
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translate(-50%, 0%);
+    p {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .btn {
+      margin-bottom: 3rem;
+    }
+  }
+}
